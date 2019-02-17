@@ -1,0 +1,13 @@
+---
+# Ansible playbook to run Windows Update and restart, if required
+#
+# http://docs.ansible.com/ansible/win_updates_module.html
+# https://docs.ansible.com/ansible/win_reboot_module.html
+
+- name:  Windows Test Command
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Save the result of 'whoami' in 'whoami_out'
+      win_command: whoami
+      register: whoami_out
