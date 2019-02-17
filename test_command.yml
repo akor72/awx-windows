@@ -8,9 +8,9 @@
   hosts: all
   gather_facts: false
   tasks:
-    - name: Save the result of 'whoami' in 'whoami_out'
-      win_command: whoami
-      register: whoami_out
+#    - name: Save the result of 'whoami' in 'whoami_out'
+#      win_command: whoami
+#      register: whoami_out
       
     - name: Win reboot
       win_reboot:
